@@ -17,7 +17,7 @@ async function router(req, res, url, payload, body) {
       const pathToFile = `routes/${allowedRoutes[index]}_route.js`
       modulePath = pathToFileURL(path.resolve(__dirname, pathToFile))
     } else {
-      defaultGET(req, res, payload, body)
+      return defaultGET(req, res, payload, body)
     }
     switch (requestMethod) {
       case 'GET': {
