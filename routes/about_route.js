@@ -7,4 +7,8 @@ function GET(req, res, payload, body) {
   )
 }
 
-export { GET }
+function POST(req, res, payload, body) {
+  res.json(payload)
+}
+
+export { GET, POST }

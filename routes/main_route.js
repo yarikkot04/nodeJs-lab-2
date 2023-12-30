@@ -5,4 +5,8 @@ function GET(req, res, payload, body) {
   res.end('<h1>Lab 2. Node JS</h1>')
 }
 
-export { GET }
+function POST(req, res, payload, body) {
+  res.json(payload)
+}
+
+export { GET, POST }

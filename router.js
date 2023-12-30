@@ -26,6 +26,8 @@ async function router(req, res, url, payload, body) {
         break
       }
       case 'POST': {
+        const { POST } = await import(modulePath)
+        POST(req, res, payload, body)
         break
       }
       case 'OPTIONS': {

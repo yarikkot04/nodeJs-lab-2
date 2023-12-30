@@ -5,4 +5,8 @@ function GET(req, res, payload, body) {
   res.json({ message: 'Kotenko Yaroslav IM-13' })
 }
 
-export { GET }
+function POST(req, res, payload, body) {
+  res.json(payload)
+}
+
+export { GET, POST }
