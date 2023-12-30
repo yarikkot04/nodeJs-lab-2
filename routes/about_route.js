@@ -11,4 +11,13 @@ function POST(req, res, payload, body) {
   res.json(payload)
 }
 
-export { GET, POST }
+function OPTIONS(req, res, payload, body) {
+  res.writeHead(204, {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type'
+  })
+  res.end()
+}
+
+export { GET, POST, OPTIONS }

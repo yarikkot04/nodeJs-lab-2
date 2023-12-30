@@ -31,9 +31,15 @@ async function router(req, res, url, payload, body) {
         break
       }
       case 'OPTIONS': {
+        const { OPTIONS } = await import(modulePath)
+        OPTIONS(req, res, payload, body)
         break
       }
       default: {
+        res.writeHead(405, {
+          'Content-Type': 'text/html'
+        })
+        res.end('<h1>Method Not Allowed</h1>')
         break
       }
     }
