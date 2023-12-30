@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "lab 2 node js",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
